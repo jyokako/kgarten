@@ -28,7 +28,7 @@ var kr = query.find({
   }
 });
 console.log("*****out*****");
-  console.log("k is "+ kr);
+  console.log("k is "+ kr.length);
   console.log("id is "+iid);
   res.render('index', { title: iid });
 });
