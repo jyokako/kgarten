@@ -5,13 +5,32 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-   <ul>
+   	<table border="1">
+   <tr>
+    <th>番号</th>
+    <th>ID</th>
+    <th> MAC</th>
+    <th> デバイス名</th>
+    <th>電波</th>
+    <th>時間</th>
+  </tr>		
    	 <% var i = 0;%>
      <% infoList.forEach(function(item){ %>
      <% i++%>   
-     <li><%=i%>,<%= item.id %>, <%= item.get("message") %> </li>
-     
+     <li><%=i%> , <%= item.id %>, <%= item.get("message") %>
+  <tr>
+    <td><%=i%></td>
+    <td><%= item.get("BLid") %></td>
+    <td><%= item.get("macId") %></td>
+    <td><%= item.get("localname") %></td>
+    <td><%= item.get("rssi") %></td>
+    <td><%= item.get("time") %></td>
+  </tr>
+
+   
      <% }) %>
-   </ul>
+ </table>
   </body>
 </html>
+
+

@@ -8,7 +8,7 @@ NCMB.initialize(APP_KEY,CLIENT_KEY);
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-var GameScore = NCMB.Object.extend("TestClass");
+var GameScore = NCMB.Object.extend("dataTest");
 var query = new NCMB.Query(GameScore);
 query.find({
   success: function(results) {
