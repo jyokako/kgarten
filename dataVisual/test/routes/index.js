@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+/* GET home page. */
+router.get('/', function(req, res, next) {
 NCMB = require('./ncmb-latest.min.js').NCMB;
 var APP_KEY ="e49df7b0dad5df5a3665445beca1dd71467d72ef0e33fbe3bf5f17a4439c1e75";
 var CLIENT_KEY ="ec8e98281432001b6fb56867a9c558c0c555a19da5b43c8fdd1c7f514f71db02";
@@ -18,8 +20,7 @@ testClass.save(null, {
     // エラー時に実行される
     console.log("Failed to create new object, with error code: " + error.message);
   }
-});/* GET home page. */
-router.get('/', function(req, res, next) {
+});
   res.render('index', { title: oid });
 });
 
