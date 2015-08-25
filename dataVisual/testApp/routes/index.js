@@ -10,6 +10,8 @@ router.get('/', function(req, res, next) {
 
 var GameScore = NCMB.Object.extend("dataTest");
 var query = new NCMB.Query(GameScore);
+query.descending("updateDate");
+query.limit(1000);//default 100
 query.find({
   success: function(results) {
   console.log("Successfully retrieved " + results.length + " scores.");
