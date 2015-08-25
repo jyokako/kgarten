@@ -6,9 +6,12 @@
   </head>
   <body>
    <ul>
+   	 <% var i = 0;%>
      <% infoList.forEach(function(item){ %>
-          <li><%= item.id %>, <%= item.get("message") %> <li>
+     <% i++%>   
+     <li><%=i%>,<%= item.id %>, <%= item.get("message") %> </li>
+     
      <% }) %>
-</ul>
+   </ul>
   </body>
 </html>
