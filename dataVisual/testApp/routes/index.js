@@ -11,7 +11,6 @@ router.get('/', function(req, res, next) {
 
 var GameScore = NCMB.Object.extend("TestClass");
 var query = new NCMB.Query(GameScore);
-var iid ;
 query.find({
   success: function(results) {
     console.log("Successfully retrieved " + results.length + " scores.");
@@ -26,8 +25,6 @@ query.find({
     console.log("can not find err is "+error.message);
   }
 });
-
-
   console.log("id iis "+iid);
   res.render('index', { title: iid });
 });
