@@ -12,7 +12,7 @@ query.find({
     console.log("Successfully retrieved " + results.length + " scores.");
     for (var i = 0; i < results.length; i++) {
       var object = results[i];
-      iid = object.id;
+      iid = i;
      //  console.log(object.id + " - " + object.get("localname"));
     }
   },
