@@ -13,7 +13,7 @@ testClass.set("message", "yesyes");
 testClass.save(null, {
   success: function(object) {
     // 保存完了後に実行される
-    oid = objet.id;
+    oid = object.id;
     console.log("New object created with objectId: " + object.id);
   },
   error: function(object, error) {
