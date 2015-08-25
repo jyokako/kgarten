@@ -22,7 +22,7 @@ query.find({
     // エラー
   }
 });
-//
+
   res.render('index', { title: 'Express' });
 });
 
