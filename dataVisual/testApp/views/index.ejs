@@ -17,7 +17,6 @@
    	 <% var i = 0;%>
      <% infoList.forEach(function(item){ %>
      <% i++%>   
-     <li><%=i%> , <%= item.id %>, <%= item.get("message") %>
   <tr>
     <td><%=i%></td>
     <td><%= item.get("BLid") %></td>
@@ -26,8 +25,6 @@
     <td><%= item.get("rssi") %></td>
     <td><%= item.get("time") %></td>
   </tr>
-
-   
      <% }) %>
  </table>
   </body>
