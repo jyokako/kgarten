@@ -12,13 +12,14 @@ router.get('/', function(req, res, next) {
 var GameScore = NCMB.Object.extend("TestClass");
 var query = new NCMB.Query(GameScore);
 console.log("*****enter*****");
-query.find({
+var kr = query.find({
   success: function(results) {
     console.log("Successfully retrieved " + results.length + " scores.");
     for (var i = 0; i < results.length; i++) {
       var object = results[i];
       iid = i;
      //  console.log(object.id + " - " + object.get("localname"));
+    
     }
   },
   error: function(error) {
@@ -27,7 +28,8 @@ query.find({
   }
 });
 console.log("*****out*****");
-  console.log("id iis "+iid);
+  console.log("k is "+ kr);
+  console.log("id is "+iid);
   res.render('index', { title: iid });
 });
 
