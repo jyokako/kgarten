@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>リアルタイムで情報収集</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+   <ul>
+     <% infoList.forEach(function(item){ %>
+          <li><%= item.id %>, <%= item.get("message") %> <li>
+     <% }) %>
+</ul>
   </body>
 </html>
