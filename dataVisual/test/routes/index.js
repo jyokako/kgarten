@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var oid ;
 /* GET home page. */
 router.get('/', function(req, res, next) {
 NCMB = require('/root/kGarken/dataVisual/test/ncmb-latest.min.js').NCMB;
@@ -8,7 +9,6 @@ var CLIENT_KEY ="ec8e98281432001b6fb56867a9c558c0c555a19da5b43c8fdd1c7f514f71db0
 NCMB.initialize(APP_KEY, CLIENT_KEY);
 var TestClass = NCMB.Object.extend("TestClass");
 var testClass = new TestClass();
-var oid ;
 testClass.set("message", "yesyes");
 testClass.save(null, {
   success: function(object) {
